@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.loginController2">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.loginController2">
    <children>
       <Text layoutX="175.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
          <font>
@@ -21,19 +21,22 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Text layoutX="70.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :">
+      <Text layoutX="108.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address :">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
       <TextField fx:id="idfield2" layoutX="254.0" layoutY="150.0" onAction="#signup_user_id" prefHeight="28.0" prefWidth="187.0" promptText="Enter Your ID" />
       <PasswordField fx:id="Passwordfield2" layoutX="254.0" layoutY="203.0" onAction="#sign_up_pass" prefHeight="31.0" prefWidth="187.0" promptText="Enter Your Password" />
-      <PasswordField fx:id="Passwordfieldmatch" layoutX="254.0" layoutY="262.0" onAction="#signup_confirm_pass" prefHeight="31.0" prefWidth="187.0" promptText="Enter Your Password" />
-      <Button fx:id="sec_submit" layoutX="264.0" layoutY="324.0" mnemonicParsing="false" onAction="#sign_up_submit" prefHeight="31.0" prefWidth="72.0" text="Submit" />
+      <Button fx:id="sec_submit" layoutX="264.0" layoutY="324.0" mnemonicParsing="false" onAction="#sign_up_submit" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f84f4f;" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <ImageView fitHeight="127.0" fitWidth="348.0" layoutX="127.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/ride%20hop-01.jpg" />
          </image>
       </ImageView>
+      <TextField fx:id="email_address" layoutX="254.0" layoutY="263.0" onAction="#email_address_box" prefHeight="28.0" prefWidth="187.0" promptText="Enter Your Email Address" />
    </children>
 </AnchorPane>

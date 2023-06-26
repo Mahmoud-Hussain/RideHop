@@ -12,19 +12,21 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
+
 import java.util.Objects;
-import java.util.Scanner;
+
+
+
 
 
 public class loginController extends loginController2 {
 
     @FXML
-    private PasswordField Passwordfield;
+    private  PasswordField Passwordfield;
 
     @FXML
-    private TextField idfield;
+    private  TextField idfield;
 
     @FXML
     private Button loginbutton;
@@ -37,10 +39,6 @@ public class loginController extends loginController2 {
 
     @FXML
     private Text userid;
-
-    boolean grantAccess = false;
-
-
 
 
     @FXML
@@ -55,49 +53,31 @@ public class loginController extends loginController2 {
 
     @FXML
     void Log_in_panel(ActionEvent event) throws IOException {
-        String username = idfield.getText();
-        String password = Passwordfield.getText();
-
-        File scan = new File("C:\\Users\\Mushfiq Maher\\Desktop\\RideHop-Mahmoud-s-Branch\\src\\main\\resources\\Files\\DATABASE.txt");
-        Scanner scaning = new Scanner(scan);
 
 
+        if((Objects.equals(idfield.getText(), "maher")) && (Objects.equals(Passwordfield.getText(), "123"))){
 
-        while (scaning.hasNextLine()) {
-
-            if (scaning.nextLine().equals(username)) ;
-
-            {
-                if (scaning.nextLine().equals(password)) ;
-
-                {
-
-                    grantAccess=true;
-
-
-                    scaning.close();
-                    break;
-
-                }
-            }
-        }
-
-
-        if (grantAccess==true) {
-            Parent parent1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Dashboard.fxml")));
-            Scene scene3 = new Scene(parent1);
+            Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Dashboard.fxml")));
+            Scene scene3 = new Scene(parent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene3);
             window.show();
-        }
-        else {
-            Parent parent2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Failed.fxml")));
-            Scene scene4 = new Scene(parent2);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(scene4);
-            window.show();
+
+
+
         }
 
+        else{
+
+            Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Failed.fxml")));
+            Scene scene3 = new Scene(parent);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(scene3);
+            window.show();
+
+
+        }
 
     }
+
 }

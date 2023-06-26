@@ -23,13 +23,19 @@
          </font>
       </Text>
       <PasswordField fx:id="Passwordfield" layoutX="250.0" layoutY="209.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Your Password" />
-      <Button fx:id="loginbutton" layoutX="283.0" layoutY="266.0" mnemonicParsing="false" onAction="#Log_in_panel" prefHeight="31.0" prefWidth="61.0" text="Log In" />
+      <Button fx:id="loginbutton" layoutX="283.0" layoutY="266.0" mnemonicParsing="false" onAction="#Log_in_panel" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #f84f4f;" text="Log In">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <Text fx:id="signuptext" layoutX="233.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up :">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Button fx:id="signupbutton" layoutX="330.0" layoutY="335.0" mnemonicParsing="false" onAction="#signupaction" prefHeight="31.0" prefWidth="61.0" text="Press" />
+      <Button fx:id="signupbutton" layoutX="330.0" layoutY="335.0" mnemonicParsing="false" onAction="#signupaction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #f84f4f;" text="Press">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <ImageView fitHeight="144.0" fitWidth="396.0" layoutX="101.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/ride%20hop-01.jpg" />
