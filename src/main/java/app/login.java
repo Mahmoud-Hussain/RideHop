@@ -14,7 +14,7 @@ public class login extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("loginController.fxml")));
         Scene scene = new Scene(fxmlLoader.load(), Color.WHITE);
-        stage.setTitle("Hello!");
+        stage.setTitle("Ride Hop");
         stage.setScene(scene);
         stage.show();
 

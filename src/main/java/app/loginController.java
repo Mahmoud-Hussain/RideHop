@@ -11,17 +11,28 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import javafx.scene.control.Label;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Objects;
 
-public class loginController {
+
+
+
+
+
+public class loginController extends DataBase {
 
     @FXML
-    private PasswordField Passwordfield;
+    private Label Label_front;
 
     @FXML
-    private TextField idfield;
+    private  PasswordField Passwordfield;
+
+    @FXML
+    private  TextField idfield;
 
     @FXML
     private Button loginbutton;
@@ -35,6 +46,7 @@ public class loginController {
     @FXML
     private Text userid;
 
+
     @FXML
     void signupaction(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginController2.fxml")));
@@ -43,5 +55,56 @@ public class loginController {
         window.setScene(scene2);
         window.show();
     }
+
+
+    @FXML
+    void Log_in_panel(ActionEvent event) throws IOException {
+
+
+        if(!idfield.getText().isBlank() && !Passwordfield.getText().isBlank()){
+
+            Login_connect();
+
+        }
+
+        else{
+
+          Label_front.setText("Enter Your Id and Password");
+
+        }
+
+    }
+
+    public  void  Login_connect(){
+        DataBase connecting = new DataBase();
+        Connection connect_DataBase = connecting.getConnection();
+        String Check_Login ="SELECT count(1) FROM useraccount WHERE ID = '"+ idfield.getText()+"' AND passsword ='"+Passwordfield.getText()+"'";
+        try {
+            Statement statement= connect_DataBase.createStatement();
+            ResultSet queryResult = statement.executeQuery(Check_Login);
+
+            while (queryResult.next()){
+                if(queryResult.getInt(1)==1){
+                    System.out.println("open");
+
+
+                }
+                else {
+
+                    Label_front.setText("Wrong Id or Password! Please Enter Again");
+
+                }
+
+            }
+
+
+        }
+
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 
 }
