@@ -3,6 +3,7 @@ package app;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXMLLoader;
@@ -10,17 +11,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Objects;
 
 
-public class loginController2 {
 
-    protected String ID;
-    protected String PASS;
+public class loginController2 extends DataBase  {
 
+    @FXML
+    private Button Back_button;
 
     @FXML
     private PasswordField Passwordfield2;
@@ -34,35 +35,13 @@ public class loginController2 {
     @FXML
     private Button sec_submit;
 
-    @FXML
-    void email_address_box(ActionEvent event) {
-
-    }
 
     @FXML
-    void sign_up_pass(ActionEvent event) {
+    private Label Label2_register;
 
-    }
 
     @FXML
-    void sign_up_submit(ActionEvent event) throws IOException {
-
-        ID =idfield2.getText();
-        System.out.println(ID);
-
-        PASS = Passwordfield2.getText();
-        System.out.println(PASS);
-
-        FileWriter fw =new FileWriter("src\\main\\resources\\Files\\DATA.txt");
-        PrintWriter out  =new PrintWriter(fw);
-        out.write(ID);
-        out.write(PASS);
-        out.close();
-
-
-
-
-
+    void Back_button(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginController.fxml")));
         Scene scene2 = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -72,8 +51,54 @@ public class loginController2 {
     }
 
     @FXML
-    void signup_user_id(ActionEvent event) {
+    void sign_up_submit(ActionEvent event)  {
+
+
+
+        if(idfield2.getText().isBlank() && Passwordfield2.getText().isBlank()){
+
+            Label2_register.setText("Enter Your Id and Password");
+
+        }
+
+        else{
+
+            Create_Account();
+
+            Label2_register.setText("Signup Successful");
+
+
+        }
 
     }
+
+
+    public  void Create_Account(){
+        DataBase connecting = new DataBase();
+        Connection connect_DataBase = connecting.getConnection();
+
+        String id = idfield2.getText();
+        String Password = Passwordfield2.getText();
+        String Email =  email_address.getText();
+
+        String insert_Fields = "INSERT INTO useraccount (ID , passsword ) VALUES ('";
+        String insertValues = id +"','"+Password+"')";
+        String insertToRegister = insert_Fields + insertValues;
+
+        try {
+            Statement statement = connect_DataBase .createStatement();
+            statement.executeUpdate(insertToRegister);
+        }
+
+
+        catch (Exception e){
+            e.printStackTrace();
+
+        }
+
+
+
+    }
+
 
 }
