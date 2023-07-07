@@ -43,10 +43,10 @@
             <Font name="Verdana" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="studentname" layoutX="236.0" layoutY="166.0" onAction="#userinfo" prefHeight="25.0" prefWidth="330.0" promptText="Enter the name of the student" />
-      <TextField fx:id="nameofuniversity" layoutX="236.0" layoutY="202.0" onAction="#userinfo" prefHeight="25.0" prefWidth="330.0" promptText="Enter the name of university" />
-      <TextField fx:id="idnumber" layoutX="236.0" layoutY="236.0" onAction="#userinfo" prefHeight="28.0" prefWidth="330.0" promptText="Enter Your ID" />
-      <TextField fx:id="email" layoutX="236.0" layoutY="272.0" onAction="#userinfo" prefHeight="28.0" prefWidth="330.0" promptText="Enter the Email" />
-      <PasswordField fx:id="password" layoutX="236.0" layoutY="309.0" onAction="#userinfo" prefHeight="31.0" prefWidth="330.0" promptText="select a Password" />
+      <TextField fx:id="studentname" layoutX="236.0" layoutY="166.0" prefHeight="25.0" prefWidth="330.0" promptText="Enter the name of the student" />
+      <TextField fx:id="nameofuniversity" layoutX="236.0" layoutY="202.0" prefHeight="25.0" prefWidth="330.0" promptText="Enter the name of university" />
+      <TextField fx:id="idnumber" layoutX="236.0" layoutY="236.0" prefHeight="28.0" prefWidth="330.0" promptText="Enter Your ID" />
+      <TextField fx:id="email" layoutX="236.0" layoutY="272.0" prefHeight="28.0" prefWidth="330.0" promptText="Enter the Email" />
+      <PasswordField fx:id="password" layoutX="236.0" layoutY="306.0" prefHeight="31.0" prefWidth="330.0" promptText="select a Password" />
    </children>
 </AnchorPane>

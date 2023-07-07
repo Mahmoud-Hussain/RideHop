@@ -18,10 +18,10 @@ import java.util.Objects;
 public class loginController {
 
     @FXML
-    private PasswordField Passwordfield;
+    private PasswordField Passworduser;
 
     @FXML
-    private TextField idfield;
+    private TextField idnumberuser;
 
     @FXML
     private Button loginbutton;
@@ -43,5 +43,23 @@ public class loginController {
         window.setScene(scene2);
         window.show();
     }
-
+    @FXML
+    void toDashboard(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dashboardcontroller.fxml")));
+        Scene scene2 = new Scene(parent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene2);
+        window.show();
+    }
+    @FXML
+    void userlogin(ActionEvent event) throws IOException {
+        if(Integer.parseInt(idnumberuser.getText())==301){
+            System.out.println("id matched");
+            if(Objects.equals(Passworduser.getText(), "mahmoud")){
+                System.out.println("password matched");
+                toDashboard(event);
+            }
+        }
+        else System.out.println("not matched");
+    }
 }

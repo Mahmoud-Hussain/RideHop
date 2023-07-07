@@ -7,53 +7,40 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Objects;
 
-public class loginController2 {
+public class dashboardcontroller {
 
     @FXML
-    private Button infosubmit;
+    private Text selectplace;
 
     @FXML
-    private Button backToS1;
+    private Button home;
 
     @FXML
-    private TextField studentname;
+    private Button work;
 
     @FXML
-    private TextField nameofuniversity;
+    private TextField whereto;
 
     @FXML
-    private TextField idnumber;
+    private Button search;
 
     @FXML
-    private TextField email;
+    private Button signout;
 
     @FXML
-    private PasswordField password;
-
-    @FXML
-    void SceneShift(ActionEvent event) throws IOException {
+    void signout(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginController.fxml")));
         Scene scene2 = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
         window.show();
     }
-
-    @FXML
-    void userinfo(ActionEvent event) throws IOException {
-        HashMap<Integer,String> logininfo = new HashMap<>();
-        logininfo.put(Integer.parseInt(idnumber.getText()), password.getText() );
-        System.out.println(logininfo);
-        SceneShift(event);
-    }
-
 
 }
