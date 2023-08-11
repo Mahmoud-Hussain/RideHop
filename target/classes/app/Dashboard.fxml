@@ -1,21 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Dashboard">
+<HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="809.0" prefWidth="1312.0" styleClass="hbox" stylesheets="@Design.css" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Dashboard">
    <children>
-      <Label layoutX="127.0" layoutY="14.0" text="WELCOME TO DASHBOARD">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Button fx:id="map" layoutX="32.0" layoutY="77.0" mnemonicParsing="false" onAction="#mapbutton" prefHeight="38.0" prefWidth="76.0" text="Map" textFill="#ff1111">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
+      <VBox fx:id="linebox" prefHeight="624.0" prefWidth="260.0">
+         <children>
+            <AnchorPane fx:id="side_anchor" prefHeight="810.0" prefWidth="260.0" styleClass="side_anchor" stylesheets="@Design.css">
+               <children>
+                  <Pane fx:id="inner_pane" layoutX="11.0" layoutY="25.0" prefHeight="49.0" prefWidth="239.0" styleClass="inner_pane" stylesheets="@Design.css">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="25.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/transper.png" />
+                           </image>
+                        </ImageView>
+                        <Pane fx:id="deep_ineer_logo_menu" layoutX="160.0" layoutY="4.0" prefHeight="42.0" prefWidth="65.0" styleClass="deep_ineer_logo_menu" stylesheets="@Design.css">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="47.0" layoutX="15.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Button fx:id="Home_button" layoutX="30.0" layoutY="94.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="202.0" styleClass="Home_button" stylesheets="@Design.css" text="  HOME" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="83.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Home_button1" layoutX="30.0" layoutY="154.0" mnemonicParsing="false" onAction="#search_mapss" prefHeight="42.0" prefWidth="202.0" styleClass="Home_button" stylesheets="@Design.css" text="   SEARCH" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="28.0" fitWidth="41.0" layoutX="80.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/search.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Home_button2" layoutX="30.0" layoutY="214.0" mnemonicParsing="false" onAction="#Home_button2_action" prefHeight="42.0" prefWidth="202.0" styleClass="Home_button" stylesheets="@Design.css" text="COST" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="28.0" fitWidth="41.0" layoutX="67.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/fetures.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Home_button3" layoutX="29.0" layoutY="275.0" mnemonicParsing="false" onAction="#maps_load" prefHeight="42.0" prefWidth="202.0" styleClass="Home_button" stylesheets="@Design.css" text=" MAPS" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Home_button4" layoutX="30.0" layoutY="335.0" mnemonicParsing="false" onAction="#Exit" prefHeight="42.0" prefWidth="202.0" styleClass="Home_button" stylesheets="@Design.css" text="LOGOUT" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/transper.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="42.0" fitWidth="19.0" layoutX="88.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/map.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="41.0" layoutX="68.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane fx:id="pane1" prefHeight="808.0" prefWidth="1052.0">
+         <children>
+            <Pane fx:id="pane2" layoutX="3.0" layoutY="3.0" prefHeight="87.0" prefWidth="1046.0" styleClass="pane2" stylesheets="@Design.css">
+               <children>
+                  <TextField fx:id="search_field" layoutX="333.0" layoutY="29.0" prefHeight="33.0" prefWidth="316.0" promptText="Search that Place Only You Look For" styleClass="search_field" stylesheets="@Design.css" />
+                  <ImageView fitHeight="42.0" fitWidth="31.0" layoutX="295.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/search_black.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="menu1_button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="665.0" layoutY="28.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="41.0" styleClass="menu1_button" stylesheets="@Design.css" />
+                  <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="669.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/menu1.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="menu1_button1" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="736.0" layoutY="31.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="41.0" styleClass="menu1_button" stylesheets="@Design.css" />
+                  <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="741.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/avater.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ! Welcome to RideHop" wrappingWidth="445.13671875">
+               <font>
+                  <Font name="Century Gothic Bold" size="31.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Looking for Ride, Lets find...">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="49.0" fitWidth="65.0" layoutX="283.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/car_black.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="map_anchor" layoutX="6.0" layoutY="177.0" prefHeight="629.0" prefWidth="749.0" styleClass="map_anchor" stylesheets="@Design.css">
+               <children>
+                  <WebView fx:id="web1" layoutX="8.0" layoutY="13.0" prefHeight="603.0" prefWidth="732.0" />
+               </children>
+            </AnchorPane>
+            <Pane fx:id="last_pane" layoutX="760.0" layoutY="177.0" prefHeight="629.0" prefWidth="286.0" styleClass="last_pane" stylesheets="@Design.css">
+               <children>
+                  <Pane fx:id="cost_pane" layoutX="13.0" layoutY="14.0" prefHeight="209.0" prefWidth="261.0" styleClass="cost_pane" stylesheets="@Design.css">
+                     <children>
+                        <Text layoutX="106.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost">
+                           <font>
+                              <Font name="Century Gothic" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="11.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter KM:">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="DKM" layoutX="106.0" layoutY="38.0" prefHeight="29.0" prefWidth="133.0" promptText="Your Distinations KM" styleClass="DKM" stylesheets="@Design.css" />
+                        <Text layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="costing" layoutX="104.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="80.982421875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="188.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="reset" layoutX="98.0" layoutY="136.0" mnemonicParsing="false" onAction="#reset_action" prefHeight="31.0" prefWidth="65.0" styleClass="reset" stylesheets="@Design.css" text="Reset">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="chatting" layoutX="12.0" layoutY="231.0" prefHeight="388.0" prefWidth="261.0" styleClass="chatting" stylesheets="@Design.css">
+                     <children>
+                        <Text layoutX="101.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat">
+                           <font>
+                              <Font name="Century Gothic" size="24.0" />
+                           </font>
+                        </Text>
+                        <ScrollPane fx:id="scrool_pane" layoutX="8.0" layoutY="29.0" prefHeight="301.0" prefWidth="245.0">
+                           <content>
+                              <VBox fx:id="schol_vbox" prefHeight="299.0" prefWidth="243.0" />
+                           </content>
+                        </ScrollPane>
+                        <TextField fx:id="chat_field" layoutX="11.0" layoutY="342.0" prefHeight="29.0" prefWidth="188.0" promptText="Send message" styleClass="chat_field" stylesheets="@Design.css" />
+                        <Button fx:id="chat_send" layoutX="204.0" layoutY="340.0" mnemonicParsing="false" styleClass="chat_send" stylesheets="@Design.css" text="Send">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children>
+      </Pane>
    </children>
-</AnchorPane>
+</HBox>

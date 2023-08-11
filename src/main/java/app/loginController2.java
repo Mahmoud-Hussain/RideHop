@@ -2,23 +2,24 @@ package app;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.Statement;
 import java.util.Objects;
 
 
 
-public class loginController2 extends DataBase  {
+public class loginController2  {
+
+
 
     @FXML
     private Button Back_button;
@@ -38,6 +39,13 @@ public class loginController2 extends DataBase  {
 
     @FXML
     private Label Label2_register;
+
+    @FXML
+    private TextField universityname;
+
+    @FXML
+    private TextField username;
+
 
 
     @FXML
@@ -60,45 +68,46 @@ public class loginController2 extends DataBase  {
             Label2_register.setText("Enter Your Id and Password");
 
         }
+        else if (!idfield2.getText().isBlank() && Passwordfield2.getText().isBlank() || idfield2.getText().isBlank() && !Passwordfield2.getText().isBlank()) {
 
+            Label2_register.setText("Enter Your Id and Password");
+        }
         else{
 
-            Create_Account();
+           // Create_Account();
 
             Label2_register.setText("Signup Successful");
 
-
         }
 
     }
 
-
-    public  void Create_Account(){
-        DataBase connecting = new DataBase();
-        Connection connect_DataBase = connecting.getConnection();
-
-        String id = idfield2.getText();
-        String Password = Passwordfield2.getText();
-        String Email =  email_address.getText();
-
-        String insert_Fields = "INSERT INTO useraccount (ID , passsword ) VALUES ('";
-        String insertValues = id +"','"+Password+"')";
-        String insertToRegister = insert_Fields + insertValues;
-
-        try {
-            Statement statement = connect_DataBase .createStatement();
-            statement.executeUpdate(insertToRegister);
-        }
-
-
-        catch (Exception e){
-            e.printStackTrace();
-
-        }
-
+//    public  void Create_Account(){
+//        DataBase connecting = new DataBase();
+//        Connection connect_DataBase = connecting.getConnection();
+//
+//        String id = idfield2.getText();
+//        String Password = Passwordfield2.getText();
+//        String Email =  email_address.getText();
+//
+//        String insert_Fields = "INSERT INTO useraccount (ID , passsword ) VALUES ('";
+//        String insertValues = id +"','"+Password+"')";
+//        String insertToRegister = insert_Fields + insertValues;
+//
+//        try {
+//            Statement statement = connect_DataBase .createStatement();
+//            statement.executeUpdate(insertToRegister);
+//        }
+//
+//
+//        catch (Exception e){
+//            e.printStackTrace();
+//
+//        }
 
 
-    }
+
+//    }
 
 
 }

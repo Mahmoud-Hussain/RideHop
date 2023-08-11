@@ -1,0 +1,148 @@
+
+.hbox{
+
+-fx-background-color:#EAEEF4;
+
+}
+
+.side_anchor{
+
+ -fx-background-color:#353A56;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-background-radius: 20px;
+ -fx-border-style: solid;
+
+}
+
+.inner_pane{
+ -fx-background-color:#748CF1;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-background-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #748CF1;
+
+}
+
+.deep_ineer_logo_menu{
+
+-fx-background-color:#6780E2;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-background-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #748CF1;
+
+
+}
+
+.Home_button{
+
+-fx-background-color:#748CF1;
+ -fx-background-radius: 20px;
+
+
+
+
+}
+
+.search_field{
+
+-fx-background-color:#EAEEF4;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-background-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #E7294A;
+
+}
+.menu1_button{
+-fx-background-color:#EAEEF4;
+
+}
+
+.map_anchor{
+-fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #E7294A;
+ -fx-border-color: #748CF1;
+
+
+}
+
+.pane2{
+-fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+  -fx-border-color: #E7294A;
+}
+
+.last_pane{
+-fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+  -fx-border-color: #FD9999;
+}
+.cost_pane{
+-fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+  -fx-border-color: F9B517;
+}
+
+.DKM{
+ -fx-background-color:#EAEEF4;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+  -fx-border-color: #E7294A;
+}
+
+.costing{
+ -fx-background-color:#EAEEF4;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+  -fx-border-color: #E7294A;
+}
+
+.chatting{
+
+-fx-border-width:2px 2px 2px 2px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #E7294A;
+ -fx-border-color: #748CF1;
+
+
+}
+
+.reset{
+-fx-background-color:#748CF1;
+ -fx-background-radius: 20px;
+
+
+}
+
+
+.chat_field{
+
+ -fx-background-color:#EAEEF4;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #E7294A;
+
+
+}
+
+.chat_send{
+-fx-background-color:#748CF1;
+ -fx-background-radius: 20px;
+
+}
