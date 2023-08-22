@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="main_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1116.0" styleClass="background" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Dashboard">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="30.0" prefWidth="1117.0" styleClass="background1" stylesheets="@Style.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="menu" alignment="CENTER" layoutX="35.0" layoutY="2.0" prefHeight="24.0" prefWidth="79.0" styleClass="labelbutton" stylesheets="@Style.css" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="menuback" alignment="CENTER" layoutX="26.0" layoutY="1.0" prefHeight="25.0" prefWidth="96.0" stylesheets="@Style.css" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="exit" fitHeight="25.0" fitWidth="30.0" layoutX="1081.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="324.0" layoutY="29.0" prefHeight="671.0" prefWidth="1117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <Pane prefHeight="671.0" prefWidth="1117.0">
+               <children>
+                  <AnchorPane fx:id="SlideNav" prefHeight="671.0" prefWidth="186.0" styleClass="SlideNav" stylesheets="@Style.css">
+                     <children>
+                        <Button fx:id="map" alignment="CENTER" layoutX="56.0" layoutY="112.0" mnemonicParsing="false" onAction="#maps_load" prefHeight="25.0" prefWidth="124.0" stylesheets="@Style.css" text="Map" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="Map" fitHeight="24.0" fitWidth="32.0" layoutX="20.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/search.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="Account" alignment="CENTER" layoutX="56.0" layoutY="157.0" mnemonicParsing="false" onAction="#Account_action" prefHeight="28.0" prefWidth="124.0" stylesheets="@Style.css" text="Account" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="imgaccount" fitHeight="24.0" fitWidth="32.0" layoutX="19.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/account.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="About_us" alignment="CENTER" layoutX="56.0" layoutY="201.0" mnemonicParsing="false" onAction="#About_us" prefHeight="28.0" prefWidth="124.0" text="About " textFill="WHITE">
+                           <font>
+                              <Font name="Verdana Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="aboutus" fitHeight="24.0" fitWidth="32.0" layoutX="19.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/info.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="logoutb" alignment="CENTER" layoutX="56.0" layoutY="246.0" mnemonicParsing="false" onAction="#logoutb" prefHeight="28.0" prefWidth="124.0" stylesheets="@Style.css" text="Log out" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="logout" fitHeight="24.0" fitWidth="32.0" layoutX="14.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/logout.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Pane fx:id="cost_pane" layoutX="694.0" layoutY="1.0" prefHeight="186.0" prefWidth="211.0" styleClass="cost_pane" stylesheets="@Style.css">
+                     <children>
+                        <Text fill="WHITE" layoutX="83.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="9.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter KM:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="DKM" layoutX="78.0" layoutY="50.0" prefHeight="17.0" prefWidth="124.0" promptText="Distinations KM" styleClass="DKM" stylesheets="@Style.css" />
+                        <Text fill="WHITE" layoutX="9.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="costing" fill="WHITE" layoutX="66.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="80.982421875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="163.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="reset" layoutX="121.0" layoutY="136.0" mnemonicParsing="false" onAction="#reset_action" prefHeight="30.0" prefWidth="65.0" styleClass="reset" stylesheets="@Style.css" text="Reset" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="submit_km" layoutX="32.0" layoutY="136.0" mnemonicParsing="false" onAction="#submit_km" prefHeight="30.0" prefWidth="65.0" styleClass="reset" stylesheets="@Style.css" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Line fx:id="line" endX="-100.0" endY="201.0" layoutX="309.0" layoutY="-15.0" startX="-100.0" startY="15.0" stroke="#21a179" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="distance_pane" layoutX="905.0" layoutY="1.0" prefHeight="186.0" prefWidth="211.0" styleClass="distance_pane" stylesheets="@Style.css">
+                     <children>
+                        <Text fill="WHITE" layoutX="80.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Travel">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="10.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="11.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="place_name1" layoutX="60.0" layoutY="42.0" prefHeight="29.0" prefWidth="138.0" promptText="Place Name" styleClass="DKM" stylesheets="@Style.css" />
+                        <TextField fx:id="place_name2" layoutX="61.0" layoutY="86.0" prefHeight="29.0" prefWidth="138.0" promptText="Place Name" styleClass="DKM" stylesheets="@Style.css" />
+                        <Button fx:id="place_submit" layoutX="28.0" layoutY="135.0" mnemonicParsing="false" onAction="#place_submit" prefHeight="30.0" prefWidth="65.0" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="place_reset" layoutX="120.0" layoutY="135.0" mnemonicParsing="false" onAction="#place_reset" prefHeight="30.0" prefWidth="65.0" text="Reset" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <WebView fx:id="wb" layoutX="187.0" layoutY="2.0" prefHeight="667.0" prefWidth="506.0" />
+                  <Pane fx:id="pro_bar_pane" layoutX="694.0" layoutY="187.0" prefHeight="186.0" prefWidth="422.0" styleClass="cost_pane" stylesheets="@Style.css">
+                     <children>
+                        <Text fill="WHITE" layoutX="158.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Progress Bar">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <ProgressBar fx:id="progress_bar" layoutX="167.0" layoutY="39.0" prefHeight="19.0" prefWidth="200.0" progress="0.0" styleClass="progress_bar" stylesheets="@Style.css" />
+                        <Button fx:id="finding_ride" layoutX="7.0" layoutY="33.0" mnemonicParsing="false" onAction="#finding_ride" prefHeight="25.0" prefWidth="62.0" text="Find" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Line endX="339.0" layoutX="83.0" layoutY="1.0" startX="-82.0" stroke="#21a179" />
+                        <Button fx:id="cancel_progress" layoutX="83.0" layoutY="32.0" mnemonicParsing="false" onAction="#cancel_progress" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="progress_label" alignment="CENTER" contentDisplay="RIGHT" layoutX="168.0" layoutY="61.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER" textFill="#21a179">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ride_compleated" layoutX="11.0" layoutY="81.0" mnemonicParsing="false" onAction="#ride_compleated" text="Done" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <ProgressBar fx:id="progress_bar2" layoutX="168.0" layoutY="83.0" prefHeight="19.0" prefWidth="200.0" progress="0.0" styleClass="progress_bar2" stylesheets="@Style.css" />
+                        <Label fx:id="percent_label" layoutX="372.0" layoutY="83.0" text="0%" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pament_method" layoutX="1.0" layoutY="2.0" prefHeight="186.0" prefWidth="422.0" styleClass="cost_pane" stylesheets="@Style.css">
+                           <children>
+                              <Text fill="WHITE" layoutX="143.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="bikash_pament" layoutX="164.0" layoutY="105.0" mnemonicParsing="false" onAction="#bikash_pament" prefHeight="34.0" prefWidth="89.0" text="BKASH" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="87.0" fitWidth="124.0" layoutX="150.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/BKash-bKash-Logo.wine.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="pement_method_label" alignment="CENTER" layoutX="35.0" layoutY="145.0" prefHeight="34.0" prefWidth="347.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

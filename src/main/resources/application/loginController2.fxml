@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" styleClass="background" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController2">
+   <children>
+      <ImageView fx:id="image2" fitHeight="401.0" fitWidth="440.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/shundorektajinish (1).gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Imagineview" fitHeight="150.0" fitWidth="351.0" layoutX="275.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/rhl1.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="414.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="411.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password ">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="412.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address ">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="693.0" layoutY="209.0" prefHeight="28.0" prefWidth="196.0" promptText="Enter Your Name" styleClass="loginlabel" stylesheets="@Style.css" />
+      <TextField fx:id="idfield2" layoutX="693.0" layoutY="247.0" prefHeight="28.0" prefWidth="196.0" promptText="Enter Your ID" styleClass="loginlabel" stylesheets="@Style.css" />
+      <PasswordField fx:id="Passwordfield2" layoutX="693.0" layoutY="285.0" prefHeight="28.0" prefWidth="196.0" promptText="Enter Your Password" styleClass="loginlabel" stylesheets="@Style.css" />
+      <TextField fx:id="email_address" layoutX="693.0" layoutY="325.0" prefHeight="28.0" prefWidth="196.0" promptText="Enter Your Email Address" styleClass="loginlabel" stylesheets="@Style.css" />
+      <TextField fx:id="universityname" layoutX="693.0" layoutY="364.0" prefHeight="28.0" prefWidth="196.0" promptText="Enter Your University Name" styleClass="loginlabel" stylesheets="@Style.css" />
+      <Button fx:id="sec_submit" layoutX="795.0" layoutY="405.0" mnemonicParsing="false" onAction="#sign_up_submit" prefHeight="40.0" prefWidth="94.0" text="Submit" textFill="#f2f2f2">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Back_button" layoutX="816.0" layoutY="15.0" mnemonicParsing="false" onAction="#Back_button" prefHeight="31.0" prefWidth="70.0" stylesheets="@Style.css" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="Label2_register" alignment="CENTER" contentDisplay="CENTER" layoutX="463.0" layoutY="152.0" prefHeight="28.0" prefWidth="395.0" textAlignment="CENTER" textFill="#21a179">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="414.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="411.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University Name">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

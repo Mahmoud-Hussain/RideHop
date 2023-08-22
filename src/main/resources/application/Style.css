@@ -1,0 +1,134 @@
+.SlideNav{
+    -fx-background-color:#353A56;
+    -fx-border-width:2px 2px 2px 2px;
+
+}
+.side{
+    -fx-background-color:#1B4F72;
+    -fx-border-width:2px 2px 2px 2px;
+}
+.top{
+     -fx-background-color:#414A80;
+     -fx-border-width:2px 2px 2px 2px;
+}
+.background{
+    -fx-background-color:#D3EDE3;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.button{
+    -fx-background-color:#21A179;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.button:hover{
+    -fx-background-color:#FF0000;
+    -fx-background-radius: 20px;
+
+}
+.loginlabel{
+
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+
+}
+.background1{
+    -fx-background-color:#353A56;
+
+}
+.labelbutton{
+    -fx-background-color:#5A6292;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+
+}
+.labelbutton:hover{
+    -fx-background-color:#21A179;
+    -fx-background-radius: 20px;
+}
+
+
+.cost_pane{
+
+-fx-background-color:#353A56;
+  -fx-border-width:2px 2px 2px 2px;
+
+
+}
+.reset{
+
+ -fx-background-color:#21A179;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+
+}
+
+.DKM{
+
+-fx-background-color:#EAEEF4;
+ -fx-border-width:2px 2px 2px 2px;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+ -fx-border-style: solid;
+ -fx-border-color: #21A179;
+
+}
+.paneDesign{
+-fx-background-color:#353A56;
+-fx-border-radius: 0 20 20 0;
+  -fx-background-radius: 0 20 20 0;
+
+}
+.paneDesign1{
+-fx-background-color:#FA9075;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+}
+.paneDesign2{
+-fx-background-color:#21A179;
+ -fx-background-radius: 20px;
+ -fx-border-radius: 20px;
+}
+.labelbutton1{
+        -fx-background-color:#21A179;
+        -fx-border-width:2px 2px 2px 2px;
+        -fx-background-radius: 20px;
+        -fx-border-radius: 20px;
+
+}
+.labelbutton1:hover{
+    -fx-background-color:#FF0000;
+    -fx-background-radius: 20px;
+}
+.distance_pane{
+-fx-background-color:#353A56;
+
+}
+.progress_bar{
+
+-fx-accent:#21A179;
+
+}
+
+.progress_bar2{
+
+-fx-accent:#21A179;
+
+}
+
+.front_account_pane{
+-fx-background-color:#D3EDE3;
+
+}
+
+
+.main_account{
+-fx-background-color:#D3EDE3;
+}
+
+
