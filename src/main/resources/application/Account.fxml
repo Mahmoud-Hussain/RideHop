@@ -3,88 +3,119 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="main_account" prefHeight="568.0" prefWidth="741.0" styleClass="main_account" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Account">
+<AnchorPane fx:id="main_account" prefHeight="700.0" prefWidth="1117.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Account">
    <children>
-      <Label fx:id="l1" layoutX="299.0" layoutY="74.0" prefHeight="35.0" prefWidth="244.0">
+      <Label fx:id="l1" layoutX="298.0" layoutY="265.0" prefHeight="35.0" prefWidth="244.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="l3" layoutX="300.0" layoutY="173.0" prefHeight="35.0" prefWidth="244.0" text="***********">
+      <Label fx:id="l3" layoutX="298.0" layoutY="364.0" prefHeight="35.0" prefWidth="133.0" text="***********">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="back_das" layoutX="631.0" layoutY="508.0" mnemonicParsing="false" onAction="#back_das" prefHeight="30.0" prefWidth="72.0" text="Back">
+      <Text layoutX="224.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="758.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="New_Password_button" layoutX="811.0" layoutY="427.0" mnemonicParsing="false" onAction="#New_Password_button" prefHeight="35.0" prefWidth="94.0" text="Confirm">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="277.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Details">
+      <Button fx:id="Reveal" layoutX="449.0" layoutY="367.0" mnemonicParsing="false" onAction="#Reveal" prefHeight="30.0" prefWidth="66.0" text="Reveal" />
+      <Text layoutX="56.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="Verdana Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="82.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+      <Label fx:id="l2" layoutX="298.0" layoutY="314.0" prefHeight="35.0" prefWidth="244.0">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="57.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="84.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+      <Label fx:id="l4" layoutX="298.0" layoutY="419.0" prefHeight="35.0" prefWidth="244.0">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="56.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University Name:">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="271.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
+      <Label fx:id="l5" layoutX="298.0" layoutY="472.0" prefHeight="35.0" prefWidth="244.0">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font size="24.0" />
          </font>
-      </Text>
-      <Button fx:id="New_Password_button" layoutX="329.0" layoutY="508.0" mnemonicParsing="false" onAction="#New_Password_button" prefHeight="30.0" prefWidth="72.0" text="Confirm">
+      </Label>
+      <PasswordField fx:id="New_Password" layoutX="735.0" layoutY="367.0" prefWidth="244.0" promptText="New_Password" styleClass="loginlabel" stylesheets="@Style.css" />
+      <AnchorPane prefHeight="31.0" prefWidth="1118.0" styleClass="background1" stylesheets="@Style.css">
+         <children>
+            <ImageView fx:id="Close" fitHeight="20.0" fitWidth="30.0" layoutX="1082.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="back_das" layoutX="5.0" layoutY="32.0" mnemonicParsing="false" onAction="#back_das" prefHeight="30.0" prefWidth="72.0" text="Back">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Reveal" layoutX="546.0" layoutY="174.0" mnemonicParsing="false" onAction="#Reveal" prefHeight="30.0" prefWidth="78.0" text="Reveal" />
-      <Label fx:id="chaange_password_label" alignment="CENTER" layoutX="223.0" layoutY="427.0" prefHeight="26.0" prefWidth="288.0">
+      <Button fx:id="ChangePassword" layoutX="436.0" layoutY="658.0" mnemonicParsing="false" text="Change Password">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Information" layoutX="615.0" layoutY="657.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="149.0" text="Information">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="chaange_password_label" alignment="CENTER" layoutX="714.0" layoutY="252.0" prefHeight="26.0" prefWidth="288.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Text layoutX="82.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Text>
-      <Label fx:id="l2" layoutX="300.0" layoutY="123.0" prefHeight="35.0" prefWidth="244.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Text layoutX="84.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Text>
-      <Label fx:id="l4" layoutX="301.0" layoutY="228.0" prefHeight="35.0" prefWidth="244.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Text layoutX="84.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University Name:">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Text>
-      <Label fx:id="l5" layoutX="303.0" layoutY="281.0" prefHeight="35.0" prefWidth="244.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <PasswordField fx:id="New_Password" layoutX="289.0" layoutY="464.0" promptText="New_Password" />
+      <Pane fx:id="Slidepane" layoutX="598.0" layoutY="31.0" prefHeight="669.0" prefWidth="520.0" styleClass="background1" stylesheets="@Style.css">
+         <children>
+            <ImageView fx:id="image" fitHeight="669.0" fitWidth="520.0" layoutX="1.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/bk.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

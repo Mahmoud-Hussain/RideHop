@@ -28,7 +28,8 @@ import java.util.ResourceBundle;
 
 public class loginController1 implements Initializable {
 
-
+    @FXML
+    private ImageView close;
     @FXML
     private Label Rider_Button;
     @FXML
@@ -68,6 +69,14 @@ public class loginController1 implements Initializable {
     private Pane whole_pane;
     public String pass_id1;
 
+    private BufferedWriter BW1;
+
+
+
+
+
+
+
 
 
 
@@ -77,6 +86,7 @@ public class loginController1 implements Initializable {
         Scene scene2 = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
+        window.centerOnScreen();
         window.show();
     }
 
@@ -90,14 +100,8 @@ public class loginController1 implements Initializable {
         } else {
 
             Label_front.setText("Enter Your Email and Password");
-
         }
-
     }
-
-
-
-
 
     public void Login_connect(ActionEvent event) {
 
@@ -118,13 +122,12 @@ public class loginController1 implements Initializable {
                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     window.setScene(scene2);
                     window.show();
-
+                    window.centerOnScreen();
                     pass_id1 = idfield.getText();
 
                     User_Information();
 
-
-
+                    Client client = new Client("localhost",33333);
 
                 }
                 else {
@@ -151,11 +154,16 @@ public class loginController1 implements Initializable {
         Connection connect_DataBase = connecting.getConnection();
 
         BufferedWriter BW = new BufferedWriter(new FileWriter("Info_Store.txt"));
+        BW1 =new BufferedWriter(new FileWriter("onlyname.txt"));
+
+
         String String_data = "select name,userid,password,email,universityname from rider where userid = ?";
         PreparedStatement st = connect_DataBase.prepareStatement(String_data);
 
         st.setString(1, pass_id1);
         ResultSet rs = st.executeQuery();
+
+
 
 
         if (rs.next()) {
@@ -172,28 +180,63 @@ public class loginController1 implements Initializable {
             BW.close();
 
 
+            if (BW1 != null) {
+                BW1.close();
+            }
+
+            BW1 =new BufferedWriter(new FileWriter("onlyname.txt"));
+
+
+
+            try {
+                BW1.write(rs.getString("name"));
+                BW1.close();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            catch (Exception e) {
+                System.out.println(e);
+            } finally {
+                try {
+
+                    if (BW1 != null) {
+                        BW1.close();
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+
+
+
+
+
+
+
 
         } else {
             System.out.println("DATA NOT FOUND!!!!");
-
         }
-
-
     }
-
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
+        close.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
 
         Image_slide.setTranslateX(0);
         Driver_button.setOnMouseClicked(event ->{
             TranslateTransition slide = new TranslateTransition();
             slide.setNode(Image_slide);
-            slide.setToX(+450);
+            slide.setToX(+500);
             slide.play();
 
             Image_slide.setTranslateX(0);
@@ -209,7 +252,7 @@ public class loginController1 implements Initializable {
             slide.setToX(0);
             slide.play();
 
-            Image_slide.setTranslateX(-450);
+            Image_slide.setTranslateX(-500);
             slide.setOnFinished((ActionEvent e) -> {
                 Driver_button.setVisible(true);
                 Rider_Button.setVisible(false);

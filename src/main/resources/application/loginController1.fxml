@@ -11,20 +11,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" styleClass="background" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController1">
+<AnchorPane prefHeight="530.0" prefWidth="1000.0" styleClass="background" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController1">
    <children>
-      <HBox fx:id="Hbox_Login" prefHeight="500.0" prefWidth="900.0">
+      <HBox fx:id="Hbox_Login" layoutY="30.0" prefHeight="500.0" prefWidth="900.0">
          <children>
             <Pane fx:id="whole_pane" prefHeight="500.0" prefWidth="900.0">
                <children>
-                  <Pane fx:id="Top_pane" prefHeight="35.0" prefWidth="900.0" styleClass="background1" stylesheets="@Style.css">
+                  <Pane fx:id="Top_pane" prefHeight="35.0" prefWidth="1000.0" stylesheets="@Style.css">
                      <children>
-                        <Button fx:id="signupbutton" layoutX="450.0" layoutY="5.0" mnemonicParsing="false" onAction="#signupaction" prefHeight="25.0" prefWidth="70.0" stylesheets="@Style.css" text="Sign Up" textFill="WHITE">
+                        <Button fx:id="signupbutton" layoutX="508.0" layoutY="3.0" mnemonicParsing="false" onAction="#signupaction" prefHeight="25.0" prefWidth="70.0" stylesheets="@Style.css" text="Sign Up" textFill="WHITE">
                            <font>
                               <Font name="Verdana Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Label fx:id="Driver_button" alignment="CENTER" layoutX="825.0" layoutY="5.0" prefHeight="25.0" prefWidth="70.0" styleClass="labelbutton1" stylesheets="@Style.css" text="Driver" textFill="WHITE">
+                        <Label fx:id="Driver_button" alignment="CENTER" layoutX="915.0" layoutY="5.0" prefHeight="25.0" prefWidth="70.0" styleClass="labelbutton1" stylesheets="@Style.css" text="Driver" textFill="WHITE">
                            <font>
                               <Font name="Verdana Bold" size="12.0" />
                            </font>
@@ -36,33 +36,33 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="Pane_Login" layoutX="449.0" layoutY="35.0" prefHeight="465.0" prefWidth="450.0">
+                  <Pane fx:id="Pane_Login" layoutX="500.0" layoutY="35.0" prefHeight="465.0" prefWidth="500.0">
                      <children>
-                        <TextField fx:id="idfield" alignment="CENTER" layoutX="72.0" layoutY="211.0" prefHeight="28.0" prefWidth="307.0" promptText="ID" styleClass="loginlabel" stylesheets="@Style.css">
+                        <TextField fx:id="idfield" alignment="CENTER" layoutX="97.0" layoutY="191.0" prefHeight="28.0" prefWidth="307.0" promptText="ID" styleClass="loginlabel" stylesheets="@Style.css">
                            <font>
                               <Font name="Verdana Bold" size="14.0" />
                            </font>
                         </TextField>
-                        <PasswordField fx:id="Passwordfield" alignment="CENTER" layoutX="72.0" layoutY="258.0" prefHeight="31.0" prefWidth="307.0" promptText="Password" styleClass="loginlabel" stylesheets="@Style.css">
+                        <PasswordField fx:id="Passwordfield" alignment="CENTER" layoutX="97.0" layoutY="238.0" prefHeight="31.0" prefWidth="307.0" promptText="Password" styleClass="loginlabel" stylesheets="@Style.css">
                            <font>
                               <Font name="Verdana Bold" size="14.0" />
                            </font>
                         </PasswordField>
-                        <Button fx:id="loginbutton" layoutX="183.0" layoutY="321.0" mnemonicParsing="false" onAction="#Log_in_panel" prefHeight="31.0" prefWidth="86.0" stylesheets="@Style.css" text="Log In" textFill="WHITE">
+                        <Button fx:id="loginbutton" layoutX="208.0" layoutY="301.0" mnemonicParsing="false" onAction="#Log_in_panel" prefHeight="31.0" prefWidth="86.0" stylesheets="@Style.css" text="Log In" textFill="WHITE">
                            <font>
                               <Font name="Verdana Bold" size="14.0" />
                            </font>
                         </Button>
-                        <Label fx:id="Label_front" alignment="CENTER" layoutX="37.0" layoutY="115.0" prefHeight="25.0" prefWidth="377.0" textFill="#21a179">
+                        <Label fx:id="Label_front" alignment="CENTER" layoutX="62.0" layoutY="133.0" prefHeight="25.0" prefWidth="377.0" textFill="#21a179">
                            <font>
                               <Font name="Century Gothic Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <AnchorPane fx:id="Image_slide" prefHeight="500.0" prefWidth="450.0" styleClass="paneDesign" stylesheets="@Style.css">
+                  <AnchorPane fx:id="Image_slide" prefHeight="500.0" prefWidth="500.0" styleClass="paneDesign" stylesheets="@Style.css">
                      <children>
-                        <ImageView fx:id="Image_login" fitHeight="500.0" fitWidth="451.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="Image_login" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../image/pane.png" />
                            </image>
@@ -73,5 +73,14 @@
             </Pane>
          </children>
       </HBox>
+      <AnchorPane layoutY="-1.0" prefHeight="31.0" prefWidth="1000.0" styleClass="background1" stylesheets="@Style.css">
+         <children>
+            <ImageView fx:id="close" fitHeight="20.0" fitWidth="20.0" layoutX="975.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

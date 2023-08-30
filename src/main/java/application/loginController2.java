@@ -1,8 +1,10 @@
 package application;
 
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,17 +14,20 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 
 import java.sql.Statement;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
 
-public class loginController2    {
+public class loginController2  implements Initializable {
 
     @FXML
     private ImageView image2;
@@ -44,6 +49,9 @@ public class loginController2    {
     @FXML
     private Button sec_submit;
 
+    @FXML
+    private ImageView Close;
+
 
     @FXML
     private Label Label2_register;
@@ -53,7 +61,11 @@ public class loginController2    {
 
     @FXML
     private TextField username;
+    @FXML
+    private ImageView image;
 
+    @FXML
+    private Button ChangePassword;
 
 
 
@@ -128,4 +140,9 @@ public class loginController2    {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+
+    }
 }

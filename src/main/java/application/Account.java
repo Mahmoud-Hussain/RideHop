@@ -1,5 +1,6 @@
 package application;
 
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -27,6 +29,8 @@ public class Account implements Initializable {
 
     @FXML
     private PasswordField New_Password;
+    @FXML
+    private Pane Slidepane;
 
     @FXML
     private Button New_Password_button;
@@ -57,9 +61,19 @@ public class Account implements Initializable {
 
     @FXML
     private AnchorPane main_account;
+    @FXML
+    private Button Information;
+    @FXML
+    private Button ChangePassword;
+
+    @FXML
+    private ImageView Close;
+
+    String newPass;
 
 
     int count=1;
+
 
 
     String User_name,User_id,User_password,User_email,User_universityname;
@@ -76,11 +90,14 @@ public class Account implements Initializable {
         User_universityname = BR.readLine();
         BR.close();
 
-        System.out.println(User_name);
-        System.out.println(User_id);
-        System.out.println(User_password);
-        System.out.println(User_email);
-        System.out.println(User_universityname);
+        newPass=User_password;
+
+
+//        System.out.println(User_name);
+//        System.out.println(User_id);
+//        System.out.println(User_password);
+//        System.out.println(User_email);
+//        System.out.println(User_universityname);
 
 
     }
@@ -97,7 +114,7 @@ public class Account implements Initializable {
 
 
           if (count%2==0) {
-              l3.setText(User_password);
+              l3.setText(newPass);
           }
 
           else{
@@ -130,6 +147,8 @@ public class Account implements Initializable {
 
 
                 chaange_password_label.setText("Password Change Successful");
+                newPass= New_Password.getText();
+
 
                 }
                 else {
@@ -155,6 +174,7 @@ public class Account implements Initializable {
         Scene scene3 = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene3);
+        window.centerOnScreen();
         window.show();
 
     }
@@ -174,7 +194,33 @@ public class Account implements Initializable {
         l4.setText(User_email);
         l5.setText(User_universityname);
 
-    }
+
+    Close.setOnMouseClicked(event -> {
+        System.exit(0);
+    });
+        Slidepane.setTranslateX(0);
+        ChangePassword.setOnMouseClicked(event -> {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setNode(Slidepane);
+        slide.setToX(-598);
+        slide.play();
+        Slidepane.setTranslateX(-598);
+        slide.setOnFinished((ActionEvent e) -> {
+            ChangePassword.setVisible(false);
+            Information.setVisible(true);
+        });
+    });
+        Information.setOnMouseClicked(event -> {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setNode(Slidepane);
+        slide.setToX(+0);
+        slide.play();
+        Slidepane.setTranslateX(+598);
+        slide.setOnFinished((ActionEvent e) -> {
+            ChangePassword.setVisible(true);
+            Information.setVisible(false);
+        });
+    });
 
 
-}
+}}

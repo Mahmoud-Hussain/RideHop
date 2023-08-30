@@ -39,6 +39,10 @@
     -fx-background-color:#353A56;
 
 }
+.bar{
+    -fx-background-color:#353A56;
+
+}
 .labelbutton{
     -fx-background-color:#5A6292;
     -fx-border-width:2px 2px 2px 2px;
@@ -130,5 +134,9 @@
 .main_account{
 -fx-background-color:#D3EDE3;
 }
+
+
+
+
 
 
